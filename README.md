@@ -164,12 +164,10 @@ gen-cmt --model anthropic/claude-3.5-sonnet --language en --maxFirstLineLength 7
 
 [OpenRouter Free Models](https://openrouter.ai/models?order=pricing-asc) 참고:
 
-| 모델                                  | 특징                |
-| ------------------------------------- | ------------------- |
-| `nvidia/nemotron-3-nano-30b-a3b:free` | 기본값, 빠르고 무료 |
-| `google/gemma-3-27b-it:free`          | 고품질, 무료        |
-| `deepseek/deepseek-r1:free`           | 추론 특화, 무료     |
-| `openai/gpt-4o`                       | 최고 품질 (유료)    |
+| 모델                                  | 특징                      |
+| ------------------------------------- | ------------------------- |
+| `nvidia/nemotron-3-nano-30b-a3b:free` | 기본값, 빠르고 무료       |
+| `x-ai/grok-4.1-fast`                  | 최고 품질 (유료지만 저렴) |
 
 ---
 
