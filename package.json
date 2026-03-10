@@ -1,0 +1,34 @@
+{
+    "name": "@hanseungheon/gen-cmt",
+    "version": "1.0.0",
+    "description": "AI-powered git commit message generator via OpenRouter",
+    "type": "module",
+    "license": "MIT",
+    "author": "hanseungheon",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hanseungheon/gen-cmt.git"
+    },
+    "homepage": "https://github.com/hanseungheon/gen-cmt#readme",
+    "bin": {
+        "gen-cmt": "src/index.mjs"
+    },
+    "files": [
+        "src/",
+        ".commitai.example.json"
+    ],
+    "keywords": [
+        "git",
+        "commit",
+        "ai",
+        "openrouter",
+        "conventional-commits",
+        "cli"
+    ],
+    "engines": {
+        "node": ">=18"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.0"
+    }
+}

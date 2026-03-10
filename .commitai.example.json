@@ -1,0 +1,10 @@
+{
+    "model": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "language": "ko",
+    "temperature": 0.1,
+    "maxTokens": 2048,
+    "maxFirstLineLength": 60,
+    "fallbackMessage": "chore: 코드 변경사항 커밋",
+    "customPrompt": "",
+    "promptExtras": ""
+}
