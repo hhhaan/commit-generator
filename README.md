@@ -7,21 +7,7 @@ Staged 변경사항을 분석해 Conventional Commits 형식의 메시지를 자
 
 ## 설치 방법 (Installation)
 
-### 방법 1: 전역 설치 (추천) — 어디서든 `gen-cmt` 명령어 사용
-
-```bash
-npm install -g @hanseungheon/gen-cmt
-```
-
-설치 후 어떤 Git 프로젝트에서든 바로 사용:
-
-```bash
-gen-cmt
-```
-
----
-
-### 방법 2: 프로젝트 로컬 설치 — 팀 프로젝트에서 공유
+### 방법 1: 프로젝트 로컬 설치 (추천) — 팀 프로젝트에서 공유
 
 ```bash
 npm install @hanseungheon/gen-cmt
@@ -42,6 +28,20 @@ npm install @hanseungheon/gen-cmt
 ```bash
 git add .
 npm run commit
+```
+
+---
+
+### 방법 2: 전역 설치 — 어디서든 `gen-cmt` 명령어 사용
+
+```bash
+npm install -g @hanseungheon/gen-cmt
+```
+
+설치 후 어떤 Git 프로젝트에서든 바로 사용:
+
+```bash
+gen-cmt
 ```
 
 ---
