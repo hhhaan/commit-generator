@@ -188,15 +188,16 @@ EOF
 
 ---
 
-## 왜 만들었나
+## 이미 있는데 왜 만들었나
 
 1. VSCode 내장 commit message 생성 기능이 불편해서
-2. GitLens 자체 기능은 커스텀 프롬프트 반영이 안 됨
-3. 자유롭게 컨벤션을 지정하고 싶어서
-4. 커밋 메시지 작성이 생각보다 시간이 많이 걸려서
+   - GitLens 자체 기능은 커스텀 프롬프트 반영이 안 됨
+2. 자유롭게 컨벤션을 지정하고 싶어서
+3. 커밋 메시지 작성이 생각보다 시간이 많이 걸려서, 작업 속도가 떨어짐.
+4. agent 사용시에도 해당 라이브러리를 사용하면 불필요한 토큰 소모량을 줄일 수 있음.
 
 ---
 
 ## License
 
-MIT © [hhanheon](https://github.com/hhanheon)
+MIT © [hhhaan](https://github.com/hhhaan)
