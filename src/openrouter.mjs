@@ -23,5 +23,6 @@ export async function complete(config, systemPrompt, userContent) {
         throw new Error(`OpenRouter ${res.status}: ${JSON.stringify(err)}`);
     }
 
-    return data.choices?.[0]?.message?.content?.trim() ?? '';
+    const content = data.choices?.[0]?.message?.content?.trim() ?? '';
+    return content.replace(/\\n/g, '\n');
 }
