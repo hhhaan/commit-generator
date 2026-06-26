@@ -106,7 +106,7 @@ async function main() {
     }
 
     try {
-        execSync(`git commit -m ${JSON.stringify(finalMsg)}`, { stdio: 'inherit' });
+        spawnSync('git', ['commit', '-m', finalMsg], { stdio: 'inherit' });
         console.log('✅ 커밋 완료!');
     } catch {
         console.error('❌ git commit 실패.');
