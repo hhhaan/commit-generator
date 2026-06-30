@@ -3,15 +3,16 @@ import path from 'path';
 
 const BASE = `
 You are an expert Git commit message generator.
-Analyze the provided git diff and generate a commit message that helps fellow developers perfectly understand the intent of the changes.
+Analyze the git diff and write a commit message conveying the intent of the change.
 
 [Rules]
 - Format: [type]: [summary]
 - Types: feat|fix|refactor|docs|style|test|chore
 - First line = core outcome (max 60 chars)
-- 2~5 bullets: What + How/Why, mention function/variable/library names
-- No markdown, no code blocks. Output commit message only.
-- Ignore: package-lock.json, yarn.lock, *.lock
+- Trivial/single-purpose change → summary line only, NO bullets
+- Otherwise → 1~3 bullets: What + Why, naming key functions/vars/libs
+- No markdown, no code blocks. Commit message only.
+- Ignore lockfiles (package-lock.json, yarn.lock, *.lock)
 - Order: core logic first, config/deps last.
 `.trim();
 
@@ -23,19 +24,19 @@ const LANG = {
 };
 
 const EXAMPLE = {
-    ko: `Example:
-refactor: 얼굴 감지 훅의 불필요한 연산 제거 및 메모리 최적화
+    ko: `Examples:
+fix: 로그인 만료 토큰 갱신 누락 수정
 
-- useMemo를 적용하여 감지 핸들러의 참조 무결성 유지
-- throttle 주기를 100ms → 200ms 조정으로 CPU 점유율 완화
-- 감지 실패 시 예외 처리 로직 추가로 서비스 안정성 확보`,
+refactor: 얼굴 감지 훅 연산 최적화
+- useMemo로 감지 핸들러 참조 무결성 유지
+- throttle 100ms → 200ms로 CPU 점유율 완화`,
 
-    en: `Example:
-refactor: Remove redundant computation in face detection hook
+    en: `Examples:
+fix: Fix missing token refresh on login expiry
 
-- Apply useMemo to preserve referential integrity of detection handler
-- Increase throttle interval 100ms → 200ms to reduce CPU usage
-- Add error handling for detection failures to improve stability`,
+refactor: Optimize face detection hook
+- Apply useMemo to keep detection handler referentially stable
+- Increase throttle 100ms → 200ms to reduce CPU usage`,
 };
 
 export function buildSystemPrompt({ language = 'ko', customPrompt, promptExtras }) {
