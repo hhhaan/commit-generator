@@ -1,6 +1,6 @@
 {
     "name": "@hanseungheon/gen-cmt",
-    "version": "0.0.0-development",
+    "version": "1.0.4",
     "publishConfig": {
         "access": "public",
         "provenance": true
